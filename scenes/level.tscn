@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bc831a885nu5c"]
+
+[ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="1_2q6dc"]
+[ext_resource type="FontFile" uid="uid://de5t2ceaiq3jd" path="res://dialogue/font/canterbury/Canterbury.ttf" id="2_w7c3h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cyian"]
+texture = ExtResource("1_2q6dc")
+
+[sub_resource type="Theme" id="Theme_napuk"]
+default_font = ExtResource("2_w7c3h")
+default_font_size = 45
+Panel/styles/panel = SubResource("StyleBoxTexture_cyian")
+RichTextLabel/colors/default_color = Color(0.7490196, 0.6117647, 0.62352943, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_napuk"]
+texture = ExtResource("1_2q6dc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1li6o"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(0, 0.76862746, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t23gv"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffx58"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_40f1j"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(0, 1, 0, 1)
+
+[node name="Level" type="Node2D" unique_id=337208239]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1938629105]
+position = Vector2(382, 477)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2q6dc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=244942145]
+position = Vector2(960, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=760746987]
+
+[node name="Dialog" type="Control" parent="CanvasLayer" unique_id=1043859348]
+layout_mode = 3
+offset_left = 112.0
+offset_top = 739.0
+offset_right = 689.0
+offset_bottom = 916.0
+theme = SubResource("Theme_napuk")
+
+[node name="Box" type="Panel" parent="CanvasLayer/Dialog" unique_id=1318488445]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="Button" parent="CanvasLayer/Dialog/Box" unique_id=861828921]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -40.0
+offset_right = 7.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_napuk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1li6o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t23gv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ffx58")
+theme_override_styles/focus = SubResource("StyleBoxTexture_40f1j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Dialog" unique_id=1053689288]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.052
+anchor_top = 0.124000005
+anchor_right = 0.957
+anchor_bottom = 0.87000006
+offset_left = -0.00399971
+offset_top = 0.05199814
+offset_right = -0.18902588
+offset_bottom = 0.009994507
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Dialog/VBoxContainer" unique_id=1652056951]
+custom_minimum_size = Vector2(100, 125)
+layout_mode = 2
+bbcode_enabled = true
+text = "Character: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
