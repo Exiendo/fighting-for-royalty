@@ -22,7 +22,8 @@ func dialogue(texts):
 	if texts != "":
 		for i in texts:
 			#print(type_string(typeof(i)))
-			if i == "-":#Change to peasant screen
+			if i == "-":
+				get_tree().change_scene_to_file("res://scenes/peasant.tscn")
 				if i != "_": 
 					if count == 0:
 						choice1 += i
@@ -66,10 +67,10 @@ func dialogue(texts):
 					print("Charac_name: " + charac_name)
 				elif count == 1:
 					pose += i
-					#print("Pose: " + pose)
+					print("Pose: " + pose)
 				elif count == 2:
 					music += i
-					#print("Music: " + i)
+					print("Music: " + i)
 				elif count == 3:
 					sound_eff += i
 				elif count == 4:
@@ -78,13 +79,13 @@ func dialogue(texts):
 				count += 1
 			elif i == ":":
 				count = 4
+		"res://scenes/judge.tscn"
 		
 		print("Character: " + charac_name)
-		if charac_name != "Peasant":
-			pass
+		get_tree().change_scene_to_file("res://scenes/" + charac_name + ".tscn")
 		#print("Pose: " + pose)
 		if pose != "":
-			peasant_poses.posing(pose)
+			peasant_poses.posing(pose, charac_name)
 		if music != "":
 			print("Music: " + music)
 			musics.audio_play(music)

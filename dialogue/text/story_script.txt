@@ -1,5 +1,5 @@
 judge_neutralB: ORDER. ORDER. ORDER IN THIS COURT ROOM I SAY!!
-king_neutralC]: no one was talking??
+king_neutralC: no one was talking??
 judge_neutralA: *ahem* Today we will be discussing the civil lawsuit charged by this lowly peasant-
 peasant_neutralC: uhh my name is-
 judge_neutralA: -against our royal highness, King Dax The III. Now plebian, state your case.

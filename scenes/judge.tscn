@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://d1oyqbbfj4i8h" path="res://scripts/audio_stream_player.gd" id="1_8p0j3"]
 [ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="2_7dx64"]
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="3_rynrt"]
-[ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="4_hd0v2"]
+[ext_resource type="Script" uid="uid://bo51cpl8u3wwx" path="res://scripts/dialog_judge.gd" id="4_8p0j3"]
 [ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="5_hwlp7"]
 [ext_resource type="Script" uid="uid://dcsjw4lwfs8qx" path="res://scripts/DialogueUI.gd" id="6_yhufv"]
 [ext_resource type="Texture2D" uid="uid://c85qex6gakseo" path="res://backgrounds/judge b done.png" id="7_8orcn"]
 [ext_resource type="Texture2D" uid="uid://beaifxon3vfqc" path="res://backgrounds/jbg done.jpg" id="8_tr4af"]
 [ext_resource type="Texture2D" uid="uid://d2o085mtd73y0" path="res://characters/judge/judge_ponderB.png" id="9_8p0j3"]
-[ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scripts/peasant_poses.gd" id="10_xen72"]
+[ext_resource type="Script" uid="uid://c6tvcrqsygkwh" path="res://scripts/judge_poses.gd" id="10_8p0j3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5u8d"]
 texture = ExtResource("5_hwlp7")
@@ -53,7 +53,7 @@ offset_top = 828.0
 offset_right = 1957.0
 offset_bottom = 1040.0
 theme = ExtResource("3_rynrt")
-script = ExtResource("4_hd0v2")
+script = ExtResource("4_8p0j3")
 
 [node name="Box" type="Panel" parent="CanvasLayer/DialogPeasant" unique_id=2012486469]
 z_index = 2
@@ -138,6 +138,6 @@ offset_bottom = 255.0
 scale = Vector2(0.865, 0.865)
 texture = ExtResource("9_8p0j3")
 expand_mode = 1
-script = ExtResource("10_xen72")
+script = ExtResource("10_8p0j3")
 
 [connection signal="pressed" from="CanvasLayer/DialogPeasant/Box/Continue" to="CanvasLayer/DialogPeasant" method="_on_continue_pressed"]
