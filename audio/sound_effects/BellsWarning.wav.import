@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cm2clmja36xm4"
-path="res://.godot/imported/BellsWarning.wav-2a590faf9aeed9fdb060219ad0f8eb54.sample"
+path="res://.godot/imported/BellsWarning.wav-2670e589c62fa9a7b9f41fa96c1a3ca8.sample"
 
 [deps]
 
-source_file="res://BellsWarning.wav"
-dest_files=["res://.godot/imported/BellsWarning.wav-2a590faf9aeed9fdb060219ad0f8eb54.sample"]
+source_file="res://audio/sound_effects/BellsWarning.wav"
+dest_files=["res://.godot/imported/BellsWarning.wav-2670e589c62fa9a7b9f41fa96c1a3ca8.sample"]
 
 [params]
 
