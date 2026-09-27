@@ -7,28 +7,28 @@ var sentence : String = ""
 var count : int = 0 
 
 @onready var ui_dialogue = $"."
-
+@onready var peasant_poses = $"../../PeasantPoses"
 
 
 func dialogue(texts):
 	if texts != "":
 		for i in texts:
-			print(type_string(typeof(i)))
+			#print(type_string(typeof(i)))
 			if i == "-":
-				print("hyphen")
+				#print("hyphen")
 				pass
 			elif i != "-" and i != ":" and i != "_":
-				print("Char: " + i)
+				#print("Char: " + i)
 				
 				if count == 0:
 					charac_name = charac_name + i
-					print("Charac_name: " + charac_name)
+					#print("Charac_name: " + charac_name)
 				elif count == 1:
 					pose += i
-					print("Pose: " + pose)
+					#print("Pose: " + pose)
 				elif count == 2:
 					music += i
-					print("Music: " + i)
+					#print("Music: " + i)
 				elif count == 3:
 					sentence += i
 			elif i == "_":
@@ -36,9 +36,10 @@ func dialogue(texts):
 			elif i == ":":
 				count = 3
 		
-		print("Character: " + charac_name)
-		print("Pose: " + pose)
-		print("Sentence: " + sentence)
+		#print("Character: " + charac_name)
+		#print("Pose: " + pose)
+		peasant_poses.posing(pose)
+		#print("Sentence: " + sentence)
 		ui_dialogue.set_text(charac_name + ": " + sentence)
 		charac_name = ""
 		pose = ""
