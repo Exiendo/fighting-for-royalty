@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ccbowj7dho1o4" path="res://scripts/title_screen.gd" id="1_e54dn"]
 [ext_resource type="Texture2D" uid="uid://tf571wr5vlc0" path="res://button_start.png" id="3_s4lrb"]
+[ext_resource type="Texture2D" uid="uid://beaifxon3vfqc" path="res://backgrounds/jbg done.jpg" id="4_e54dn"]
+[ext_resource type="Texture2D" uid="uid://1qmphq440wtr" path="res://characters/judge/judge_neutralB.png" id="5_3yumr"]
+[ext_resource type="Texture2D" uid="uid://c85qex6gakseo" path="res://backgrounds/judge b done.png" id="6_cs5ya"]
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="6_e54dn"]
 
 [node name="Title Screen" type="Node2D" unique_id=337208239]
@@ -43,6 +46,32 @@ scale = Vector2(0.25, 0.25)
 theme = ExtResource("6_e54dn")
 icon = ExtResource("3_s4lrb")
 icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1812203783]
+offset_left = -7.0
+offset_top = 1.0
+offset_right = 1913.4167
+offset_bottom = 1258.0
+texture = ExtResource("4_e54dn")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=237512119]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 10.0
+offset_right = 1374.5
+offset_bottom = 775.5
+texture = ExtResource("5_3yumr")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect" unique_id=2091981478]
+layout_mode = 0
+offset_left = -592.0
+offset_top = -398.0
+offset_right = 1340.0
+offset_bottom = 1534.0
+texture = ExtResource("6_cs5ya")
+expand_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1010967293]
 autoplay = true
