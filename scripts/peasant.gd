@@ -10,3 +10,19 @@ func _process(delta: float) -> void:
 	pass
 
 	
+
+
+func _on_button1_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button3_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button4_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_button2_pressed() -> void:
+	pass # Replace with function body.

@@ -6,6 +6,12 @@ var music : String = ""
 var sentence : String = ""
 var sound_eff : String = ""
 var count : int = 0 
+var button_no
+
+var choice1 : String = ""
+var choice2 : String = ""
+var choice3 : String = ""
+var choice4 : String = ""
 
 @onready var ui_dialogue = $"."
 @onready var peasant_poses = $"../../PeasantPoses"
@@ -16,8 +22,41 @@ func dialogue(texts):
 	if texts != "":
 		for i in texts:
 			#print(type_string(typeof(i)))
-			if i == "-":
-				#print("hyphen")
+			if i == "-":#Change to peasant screen
+				if i != "_": 
+					if count == 0:
+						choice1 += i
+					elif count == 1:
+						choice2 += i
+					elif count == 2:
+						choice3 += i
+					elif count == 3:
+						choice4 += i
+				#elif i == "_":
+					#count += 1
+					#
+				#elif i == ":":
+					#
+					#if button_no != 1:
+						#pass
+					#else:
+						#sentence =+ i
+					#if button_no != 2:
+						#pass
+					#else:
+						#sentence =+ i
+					#if button_no != 3:
+						#pass
+					#else:
+						#sentence =+ i
+					#if button_no != 4:
+						#pass
+					#else:
+						#sentence =+ i
+				#
+						#
+				elif i == "_":
+					count =+ 1
 				pass
 			elif i != "-" and i != ":" and i != "_":
 				#print("Char: " + i)
@@ -61,3 +100,21 @@ func dialogue(texts):
 		count = 0
 	else:
 		pass
+
+
+
+
+func _on_button1_pressed() -> void:
+	button_no = 1
+
+
+func _on_button2_pressed() -> void:
+	button_no = 2
+
+
+func _on_button3_pressed() -> void:
+	button_no = 3
+
+
+func _on_button4_pressed() -> void:
+	button_no = 4

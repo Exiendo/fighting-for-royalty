@@ -49,6 +49,100 @@ position = Vector2(960, 540)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1440052549]
 
+[node name="choices" type="Control" parent="CanvasLayer" unique_id=939419833]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="choice1" type="Panel" parent="CanvasLayer/choices" unique_id=1749206842]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1196.0
+offset_top = 245.0
+offset_right = 1777.0
+offset_bottom = 283.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/choices/choice1" unique_id=134484523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="choice2" type="Panel" parent="CanvasLayer/choices" unique_id=1134244877]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1196.0
+offset_top = 355.0
+offset_right = 1777.0
+offset_bottom = 393.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/choices/choice2" unique_id=394716048]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="choice3" type="Panel" parent="CanvasLayer/choices" unique_id=988432863]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1200.0
+offset_top = 457.0
+offset_right = 1781.0
+offset_bottom = 495.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/choices/choice3" unique_id=813864232]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="choice4" type="Panel" parent="CanvasLayer/choices" unique_id=293100734]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1198.0
+offset_top = 564.0
+offset_right = 1779.0
+offset_bottom = 602.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/choices/choice4" unique_id=1440658790]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="DialogPeasant" type="Control" parent="CanvasLayer" unique_id=1742733016]
 layout_mode = 3
 anchors_preset = 0
@@ -125,9 +219,9 @@ texture = ExtResource("4_i6yst")
 
 [node name="PeasantPodiumBG" type="TextureRect" parent="CanvasLayer/DialogPeasant" unique_id=2114757073]
 layout_mode = 0
-offset_left = 29.0
+offset_left = 32.0
 offset_top = -828.0
-offset_right = 2229.0
+offset_right = 2232.0
 offset_bottom = 612.0
 scale = Vector2(0.875, 0.875)
 mouse_filter = 2
@@ -168,4 +262,8 @@ position = Vector2(243, 114)
 position = Vector2(1892, 143)
 frame = 1
 
+[connection signal="pressed" from="CanvasLayer/choices/choice1/Button" to="CanvasLayer/DialogPeasant/VBoxContainer/DialogueUI" method="_on_button1_pressed"]
+[connection signal="pressed" from="CanvasLayer/choices/choice2/Button" to="CanvasLayer/DialogPeasant/VBoxContainer/DialogueUI" method="_on_button2_pressed"]
+[connection signal="pressed" from="CanvasLayer/choices/choice3/Button" to="CanvasLayer/DialogPeasant/VBoxContainer/DialogueUI" method="_on_button3_pressed"]
+[connection signal="pressed" from="CanvasLayer/choices/choice4/Button" to="CanvasLayer/DialogPeasant/VBoxContainer/DialogueUI" method="_on_button4_pressed"]
 [connection signal="pressed" from="CanvasLayer/DialogPeasant/Box/Continue" to="CanvasLayer/DialogPeasant" method="_on_continue_pressed"]
