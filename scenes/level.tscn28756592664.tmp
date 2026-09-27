@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bc831a885nu5c"]
+
+[ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://cxb3u824fm6nv" path="res://scripts/game_manager.gd" id="1_2r41h"]
+[ext_resource type="Theme" uid="uid://dpixxacm1jrxo" path="res://dialogtheme.tres" id="3_2r41h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_napuk"]
+texture = ExtResource("1_2q6dc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1li6o"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(0, 0.76862746, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t23gv"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffx58"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_40f1j"]
+texture = ExtResource("1_2q6dc")
+modulate_color = Color(0, 1, 0, 1)
+
+[node name="level" type="Node2D" unique_id=337208239]
+script = ExtResource("1_2r41h")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1938629105]
+z_index = -1
+position = Vector2(960, 540)
+scale = Vector2(8, 8)
+texture = ExtResource("1_2q6dc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=244942145]
+position = Vector2(960, 540)
+
+[node name="TitleScreen" type="CanvasLayer" parent="." unique_id=1551629127]
+
+[node name="TitleScreen" type="Control" parent="TitleScreen" unique_id=97820129]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -51.5
+offset_right = 50.5
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2r41h")
+
+[node name="Start" type="Button" parent="TitleScreen/TitleScreen" unique_id=1815067670]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_napuk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1li6o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t23gv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ffx58")
+theme_override_styles/focus = SubResource("StyleBoxTexture_40f1j")
+text = "Start"
+
+[connection signal="pressed" from="TitleScreen/TitleScreen/Start" to="." method="_on_start_pressed"]
