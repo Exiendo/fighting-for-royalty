@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dxruted7swu7q"]
 
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="1_buwem"]
+[ext_resource type="Script" uid="uid://bsndq8810fc4f" path="res://scenes/peasant.gd" id="1_i6yst"]
 [ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="2_buwem"]
 [ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="3_hj0u7"]
-[ext_resource type="Script" uid="uid://dcsjw4lwfs8qx" path="res://scenes/rich_text_label.gd" id="4_hj0u7"]
+[ext_resource type="Script" uid="uid://dcsjw4lwfs8qx" path="res://scripts/DialogueUI.gd" id="4_hj0u7"]
 [ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="4_i6yst"]
 [ext_resource type="Texture2D" uid="uid://03s8mqnk6kkd" path="res://backgrounds/pbg done.jpg" id="5_buwem"]
 
@@ -27,6 +28,7 @@ texture = ExtResource("3_hj0u7")
 modulate_color = Color(0, 1, 0, 1)
 
 [node name="Peasant" type="Node2D" unique_id=1748484662]
+script = ExtResource("1_i6yst")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=905168895]
 position = Vector2(960, 540)
@@ -53,18 +55,19 @@ offset_top = -2.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Continue" type="Button" parent="CanvasLayer/DialogPeasant/Box" unique_id=772244595]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -165.0
-offset_top = -26.0
-offset_right = -125.0
-offset_bottom = 14.0
+anchors_preset = -1
+anchor_left = 0.90800005
+anchor_top = 0.87700003
+anchor_right = 0.93700004
+anchor_bottom = 1.151
+offset_left = -0.28808594
+offset_top = 0.07598877
+offset_right = 0.11791992
+offset_bottom = -0.012008667
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_7k5ev")
@@ -88,7 +91,7 @@ offset_bottom = 0.009994507
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DialogPeasant/VBoxContainer" unique_id=628023641]
+[node name="DialogueUI" type="RichTextLabel" parent="CanvasLayer/DialogPeasant/VBoxContainer" unique_id=628023641]
 custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 bbcode_enabled = true
@@ -103,6 +106,7 @@ offset_top = -828.0
 offset_right = 2229.0
 offset_bottom = 612.0
 scale = Vector2(0.75, 0.75)
+mouse_filter = 2
 texture = ExtResource("4_i6yst")
 
 [node name="PeasantPodiumBG" type="TextureRect" parent="CanvasLayer/DialogPeasant" unique_id=2114757073]
@@ -112,4 +116,7 @@ offset_top = -828.0
 offset_right = 2229.0
 offset_bottom = 612.0
 scale = Vector2(0.875, 0.875)
+mouse_filter = 2
 texture = ExtResource("5_buwem")
+
+[connection signal="pressed" from="CanvasLayer/DialogPeasant/Box/Continue" to="CanvasLayer/DialogPeasant" method="_on_continue_pressed"]

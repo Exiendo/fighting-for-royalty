@@ -1,5 +1,6 @@
 extends Control
-
+@onready var label = $VBoxContainer/DialogueUI
+var file = FileAccess.open("res://dialogue/text/story_script.txt", FileAccess.READ)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +11,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/peasant.tscn")
+	var content = file.get_line()
+	label.dialogue(content)
