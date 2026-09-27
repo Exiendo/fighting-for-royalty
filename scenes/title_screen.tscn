@@ -1,61 +1,60 @@
-[gd_scene format=3 uid="uid://bc831a885nu5c"]
+[gd_scene format=3 uid="uid://bwgilcfykxnmb"]
 
-[ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="1_2q6dc"]
-[ext_resource type="FontFile" uid="uid://de5t2ceaiq3jd" path="res://dialogue/font/canterbury/Canterbury.ttf" id="2_w7c3h"]
-[ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="3_mx8sn"]
-[ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="3_w8frs"]
+[ext_resource type="Script" uid="uid://ccbowj7dho1o4" path="res://scenes/title_screen.gd" id="1_dc4i4"]
+[ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="1_mgrm8"]
+[ext_resource type="FontFile" uid="uid://de5t2ceaiq3jd" path="res://dialogue/font/canterbury/Canterbury.ttf" id="2_dc4i4"]
+[ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="3_e54dn"]
+[ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="4_3yumr"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_napuk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mx8sn"]
 bg_color = Color(0.4862745, 0.2509804, 0.5568628, 0.59607846)
 
 [sub_resource type="Theme" id="Theme_napuk"]
-default_font = ExtResource("2_w7c3h")
+default_font = ExtResource("2_dc4i4")
 default_font_size = 45
-Panel/styles/panel = SubResource("StyleBoxFlat_napuk")
+Panel/styles/panel = SubResource("StyleBoxFlat_mx8sn")
 RichTextLabel/colors/default_color = Color(0.7490196, 0.6117647, 0.62352943, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_napuk"]
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_mgrm8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1li6o"]
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_mgrm8")
 modulate_color = Color(0, 0.76862746, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t23gv"]
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_mgrm8")
 modulate_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffx58"]
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_mgrm8")
 modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_40f1j"]
-texture = ExtResource("1_2q6dc")
+texture = ExtResource("1_mgrm8")
 modulate_color = Color(0, 1, 0, 1)
 
-[node name="Level" type="Node2D" unique_id=337208239]
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1938629105]
-position = Vector2(382, 477)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_2q6dc")
+[node name="Title Screen" type="Node2D" unique_id=337208239]
+script = ExtResource("1_dc4i4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=244942145]
 position = Vector2(960, 540)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=760746987]
+visible = false
 
 [node name="DialogPeasant" type="Control" parent="CanvasLayer" unique_id=1043859348]
-z_index = -1
 layout_mode = 3
+anchors_preset = 0
 offset_left = -29.0
 offset_top = 828.0
 offset_right = 1957.0
 offset_bottom = 1040.0
 theme = SubResource("Theme_napuk")
-script = ExtResource("3_mx8sn")
+script = ExtResource("3_e54dn")
 
 [node name="Box" type="Panel" parent="CanvasLayer/DialogPeasant" unique_id=1318488445]
+z_index = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -72,9 +71,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -33.0
-offset_top = -40.0
-offset_right = 7.0
+offset_left = -162.0
+offset_top = -37.0
+offset_right = -122.0
+offset_bottom = 3.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_napuk")
@@ -84,6 +84,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_ffx58")
 theme_override_styles/focus = SubResource("StyleBoxTexture_40f1j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogPeasant" unique_id=1053689288]
+z_index = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.052
@@ -103,8 +104,39 @@ layout_mode = 2
 bbcode_enabled = true
 text = "Peasant: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-[node name="PeasantPodium" type="TextureRect" parent="." unique_id=445932428]
-offset_right = 2200.0
-offset_bottom = 1440.0
+[node name="PeasantPodium" type="TextureRect" parent="CanvasLayer/DialogPeasant" unique_id=445932428]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -828.0
+offset_right = 2229.0
+offset_bottom = 612.0
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("3_w8frs")
+texture = ExtResource("4_3yumr")
+
+[node name="TitleButtons" type="CanvasLayer" parent="." unique_id=1594189490]
+
+[node name="Control" type="Control" parent="TitleButtons" unique_id=1293783842]
+layout_mode = 3
+anchor_left = 0.49
+anchor_top = 0.48100004
+anchor_right = 0.56
+anchor_bottom = 0.60700005
+offset_left = -48.80005
+offset_top = -57.48004
+offset_right = -149.19995
+offset_bottom = -159.56006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="Start" type="Button" parent="TitleButtons/Control" unique_id=1276599139]
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 136.0
+scale = Vector2(0.25, 0.25)
+text = "Start"
+icon = ExtResource("1_mgrm8")
+icon_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/DialogPeasant/Box/Continue" to="CanvasLayer/DialogPeasant" method="_on_continue_pressed"]
+[connection signal="pressed" from="TitleButtons/Control/Start" to="." method="_on_start_pressed"]
