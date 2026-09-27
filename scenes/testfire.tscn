@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cyarhoyohhte8"]
+
+[ext_resource type="Texture2D" uid="uid://bjm47h3p0cj7m" path="res://characters/peasant/icon3.svg" id="1_ddg6m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_napuk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ddg6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ddg6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ddg6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ddg6m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1011619561]
+sprite_frames = SubResource("SpriteFrames_napuk")
