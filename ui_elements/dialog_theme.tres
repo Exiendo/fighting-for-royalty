@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://de54tkvgwixey"]
+
+[ext_resource type="FontFile" uid="uid://de5t2ceaiq3jd" path="res://dialogue/font/canterbury/Canterbury.ttf" id="1_8yi4h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_napuk"]
+bg_color = Color(0.4862745, 0.2509804, 0.5568628, 0.59607846)
+
+[resource]
+default_font = ExtResource("1_8yi4h")
+default_font_size = 60
+Panel/styles/panel = SubResource("StyleBoxFlat_napuk")
+RichTextLabel/colors/default_color = Color(0.7490196, 0.6117647, 0.62352943, 1)
