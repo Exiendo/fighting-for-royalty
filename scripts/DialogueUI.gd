@@ -22,7 +22,7 @@ func dialogue(texts):
 				
 				if count == 0:
 					charac_name = charac_name + i
-					#print("Charac_name: " + charac_name)
+					print("Charac_name: " + charac_name)
 				elif count == 1:
 					pose += i
 					#print("Pose: " + pose)
@@ -36,12 +36,14 @@ func dialogue(texts):
 			elif i == ":":
 				count = 3
 		
-		#print("Character: " + charac_name)
+		print("Character: " + charac_name)
+		if charac_name != "Peasant":
+			pass
 		#print("Pose: " + pose)
-		peasant_poses.posing(pose)
+		if pose != "":
+			peasant_poses.posing(pose)
 		#print("Sentence: " + sentence)
 		ui_dialogue.set_text(charac_name + ": " + sentence)
-		charac_name = ""
 		pose = ""
 		music = ""
 		sentence = ""
