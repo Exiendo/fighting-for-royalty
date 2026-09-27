@@ -4,11 +4,13 @@ var charac_name : String = ""
 var pose : String = ""
 var music : String = ""
 var sentence : String = ""
+var sound_eff : String = ""
 var count : int = 0 
 
 @onready var ui_dialogue = $"."
 @onready var peasant_poses = $"../../PeasantPoses"
-
+@onready var musics = $"../../../../Music"
+@onready var sound_effects = $"../../../../SoundEffect"
 
 func dialogue(texts):
 	if texts != "":
@@ -30,11 +32,13 @@ func dialogue(texts):
 					music += i
 					#print("Music: " + i)
 				elif count == 3:
+					sound_eff += i
+				elif count == 4:
 					sentence += i
 			elif i == "_":
 				count += 1
 			elif i == ":":
-				count = 3
+				count = 4
 		
 		print("Character: " + charac_name)
 		if charac_name != "Peasant":
@@ -42,11 +46,18 @@ func dialogue(texts):
 		#print("Pose: " + pose)
 		if pose != "":
 			peasant_poses.posing(pose)
+		if music != "":
+			print("Music: " + music)
+			musics.audio_play(music)
+		if sound_eff != "":
+			print("Sound Effect: " + sound_eff)
+			sound_effects.sound_eff_play(sound_eff)
 		#print("Sentence: " + sentence)
 		ui_dialogue.set_text(charac_name + ": " + sentence)
 		pose = ""
 		music = ""
 		sentence = ""
+		sound_eff = ""
 		count = 0
 	else:
 		pass

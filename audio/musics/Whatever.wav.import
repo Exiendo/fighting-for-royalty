@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bkldqwm7bhmk5"
-path="res://.godot/imported/Whatever_you_want.wav-b2b1417486aa044b58c3f4294e61dee0.sample"
+path="res://.godot/imported/Whatever.wav-6bc40bd0f8dece9eed9cdf7b0d801c73.sample"
 
 [deps]
 
-source_file="res://Whatever_you_want.wav"
-dest_files=["res://.godot/imported/Whatever_you_want.wav-b2b1417486aa044b58c3f4294e61dee0.sample"]
+source_file="res://audio/musics/Whatever.wav"
+dest_files=["res://.godot/imported/Whatever.wav-6bc40bd0f8dece9eed9cdf7b0d801c73.sample"]
 
 [params]
 
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2

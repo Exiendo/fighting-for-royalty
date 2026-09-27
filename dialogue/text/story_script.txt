@@ -1,3 +1,3 @@
-Peasant_neutralA:Yo I need my money King Dax I, my family needs it... Why you laughing King Dax I?! I see your face, why you laughin?
-_angryA:Sir I need my money King Dax I, my family needs it... Why you laughing King Dax I?! I see your face, why you laughin?
-:Bruh I need my money King Dax I, my family needs it... Why you laughing King Dax I?! I see your face, why you laughin?
+Peasant_neutralA_Main2:Yo I need my money King Dax I, my family needs it... Why you laughing King Dax I?! I see your face, why you laughin?
+_angryA__BellsWarning:Sir I need my money King Dax I, my family needs it... Why you laughing King Dax I?! I see your face, why you laughin?
+__Lost:Bruh I need my money King Dax I, my family needs it... Why you laughing King Dax I?! I see your face, why you laughin?

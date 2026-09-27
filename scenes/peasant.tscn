@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dxruted7swu7q"]
 
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="1_buwem"]
-[ext_resource type="Script" uid="uid://bsndq8810fc4f" path="res://scenes/peasant.gd" id="1_i6yst"]
+[ext_resource type="Script" uid="uid://bsndq8810fc4f" path="res://scripts/peasant.gd" id="1_i6yst"]
+[ext_resource type="Script" uid="uid://d1oyqbbfj4i8h" path="res://scripts/audio_stream_player.gd" id="2_5sotp"]
 [ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="2_buwem"]
+[ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="3_f0u40"]
 [ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="3_hj0u7"]
 [ext_resource type="Script" uid="uid://dcsjw4lwfs8qx" path="res://scripts/DialogueUI.gd" id="4_hj0u7"]
 [ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="4_i6yst"]
 [ext_resource type="Texture2D" uid="uid://03s8mqnk6kkd" path="res://backgrounds/pbg done.jpg" id="5_buwem"]
 [ext_resource type="Texture2D" uid="uid://dlbach7215vl8" path="res://characters/peasant/peasant_neutralC.png" id="8_208ka"]
-[ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scenes/peasant_poses.gd" id="9_208ka"]
+[ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scripts/peasant_poses.gd" id="9_208ka"]
 [ext_resource type="Texture2D" uid="uid://bja82r2w78nkb" path="res://characters/peasant/peasant_angryHANDedit.png" id="10_5sotp"]
 [ext_resource type="PackedScene" uid="uid://cyarhoyohhte8" path="res://scenes/testfire.tscn" id="11_f0u40"]
 
@@ -33,6 +35,14 @@ modulate_color = Color(0, 1, 0, 1)
 
 [node name="Peasant" type="Node2D" unique_id=1748484662]
 script = ExtResource("1_i6yst")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1189886463]
+autoplay = true
+script = ExtResource("2_5sotp")
+
+[node name="SoundEffect" type="AudioStreamPlayer" parent="." unique_id=1632301164]
+autoplay = true
+script = ExtResource("3_f0u40")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=905168895]
 position = Vector2(960, 540)
