@@ -12,22 +12,27 @@ var count : int = 0
 @onready var peasant_poses = $CanvasLayer/DialogPeasant/PeasantPoses
 @onready var musics = $Music
 @onready var sound_effects = $SoundEffect
-#
-#func posing(pose):
-	#var texture = str(poses + "peasant_" + pose + ".png")
-	#print(texture)
-	#set_texture(load(texture))
-#$CanvasLayer/DialogJudge/JudgePoses
+var switch = false
+var content = ""
 
-#func switch_pose(character, pose):
-	#Char = 
-	#
-	#Char.set_texture(load(texture))
+func switch_i_tell_you():
+	print("switch is " + str(switch))
+	if switch == true:
+		switch = false
+		return true
+	else:
+		return false
 
+func gimme_content():
+	return content
 
+func did_it_switch(value):
+	if value == true:
+		print("Did it Switch is True!")
+		switch = true
 
 func dialogue_next():
-	var content = file.get_line()
+	content = file.get_line()
 	return content
 
 func dialogue(texts):
@@ -52,6 +57,7 @@ func dialogue(texts):
 					#print("Music: " + i)
 				elif count == 3:
 					sound_eff += i
+					print("")
 				elif count == 4:
 					sentence += i
 			elif i == "_":
@@ -69,7 +75,7 @@ func dialogue(texts):
 			#print("Music: " + music)
 		main_data.append(music)	
 		#if sound_eff != "":
-			#print("Sound Effect: " + sound_eff)
+		print("Sound Effect: " + sound_eff)
 		main_data.append(sound_eff)
 		#print("Sentence: " + sentence)
 		main_data.append(sentence)

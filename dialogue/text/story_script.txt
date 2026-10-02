@@ -3,8 +3,16 @@ peasant_neutralA__BellsWarning: What's this? I've been called to the court?
 peasant_angryA: Grrr...
 peasant_neutralC: I feel sad...
 peasant_angryB: Now, I'm sweating
+judge_neutralB_Intense: ORDER. ORDER. ORDER IN THIS COURT ROOM I SAY!!
+judge_neutralA__ArgumentsOptions: I smile!
+peasant_neutralA__BellsWarning: What's this? I've been called to the court?
+peasant_angryA_Intense: Grrr...
+peasant_neutralC: I feel sad...
+peasant_smugA: Did you see the sentence before Grrr...?
+judge_holditA: Maybe?
+judge_neutralA_Lost_ArgumentsOptions: I smile!
+peasant_smugB: Why did I not see that line again?
 
-judge_neutralB: ORDER. ORDER. ORDER IN THIS COURT ROOM I SAY!!
 king_neutralC: no one was talking??
 judge_neutralA: *ahem* Today we will be discussing the civil lawsuit charged by this lowly peasant-
 peasant_neutralC: uhh my name is-

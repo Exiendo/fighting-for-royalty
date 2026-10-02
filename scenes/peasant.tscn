@@ -32,20 +32,6 @@ modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
 texture = ExtResource("3_hj0u7")
 modulate_color = Color(0, 1, 0, 1)
 
-[sub_resource type="GDScript" id="GDScript_5sotp"]
-script/source = "extends TextureRect
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
-
 [node name="Peasant" type="Node2D" unique_id=1748484662]
 script = ExtResource("1_i6yst")
 
@@ -166,7 +152,6 @@ offset_right = 452.0231
 offset_bottom = 1010.4047
 texture = ExtResource("10_5sotp")
 expand_mode = 1
-script = SubResource("GDScript_5sotp")
 
 [node name="AnimatedSprite2D" parent="CanvasLayer" unique_id=1011619561 instance=ExtResource("11_f0u40")]
 position = Vector2(847, 157)
