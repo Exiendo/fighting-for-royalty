@@ -1,6 +1,9 @@
 peasant_neutralB_Main2: What a day! Everything is going so well!
 peasant_neutralA__BellsWarning: What's this? I've been called to the court?
-peasant_neutralC: Aww man...
+peasant_angryA: Grrr...
+peasant_neutralC: I feel sad...
+peasant_angryB: Now, I'm sweating
+
 judge_neutralB: ORDER. ORDER. ORDER IN THIS COURT ROOM I SAY!!
 king_neutralC: no one was talking??
 judge_neutralA: *ahem* Today we will be discussing the civil lawsuit charged by this lowly peasant-

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d1oyqbbfj4i8h" path="res://scripts/audio_stream_player.gd" id="1_8p0j3"]
 [ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="2_7dx64"]
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="3_rynrt"]
+[ext_resource type="Script" uid="uid://l0mmkhd8141q" path="res://scripts/dialog_judge.gd" id="4_s4qhy"]
 [ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="5_hwlp7"]
 [ext_resource type="Texture2D" uid="uid://c85qex6gakseo" path="res://backgrounds/judge b done.png" id="7_8orcn"]
 [ext_resource type="Texture2D" uid="uid://beaifxon3vfqc" path="res://backgrounds/jbg done.jpg" id="8_tr4af"]
@@ -50,6 +51,7 @@ offset_top = 828.0
 offset_right = 1957.0
 offset_bottom = 1040.0
 theme = ExtResource("3_rynrt")
+script = ExtResource("4_s4qhy")
 
 [node name="Box" type="Panel" parent="CanvasLayer/DialogJudge" unique_id=2012486469]
 z_index = 2

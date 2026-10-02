@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var pose_time = $PeasantPoses
+@onready var pose_time = $JudgePoses
 @onready var DialogueUI = $VBoxContainer/DialogueUI
 @onready var musics = $"../../Music"
 @onready var sound_effects = $"../../SoundEffect"
@@ -15,8 +15,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-
 func _on_continue_pressed() -> void:
 	var content = Main.dialogue_next()
 	var main_data = Main.dialogue(content) 
@@ -27,9 +25,8 @@ func _on_continue_pressed() -> void:
 	var sentence : String = ""
 	var sound_eff : String = ""
 	var count : int = 0 
-
-	if main_data:
-		print("Main data: " + main_data)
+	print("Main data: " + main_data)
+	if main_data != "":
 		for i in main_data:
 			#print(type_string(typeof(i)))
 			if i == "+":

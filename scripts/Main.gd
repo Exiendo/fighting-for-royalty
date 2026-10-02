@@ -24,6 +24,8 @@ var count : int = 0
 	#
 	#Char.set_texture(load(texture))
 
+
+
 func dialogue_next():
 	var content = file.get_line()
 	return content
