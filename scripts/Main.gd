@@ -43,7 +43,7 @@ func dialogue(texts):
 				#print("hyphen")
 				#Dialogue Choices
 				pass
-			elif i != "-" and i != ":" and i != "_":
+			elif i != "+" and i != ":" and i != "_":
 				#print("Char: " + i)
 				
 				if count == 0:
