@@ -12,14 +12,14 @@ peasant_smugA: Did you see the sentence before Grrr...?
 judge_holditA: Maybe?
 judge_neutralA_Lost_ArgumentsOptions: I smile!
 peasant_smugB: Why did I not see that line again?
-
 king_neutralC: no one was talking??
+king_enragedA: RAHHHH!
 judge_neutralA: *ahem* Today we will be discussing the civil lawsuit charged by this lowly peasant-
 peasant_neutralC: uhh my name is-
 judge_neutralA: -against our royal highness, King Dax The III. Now plebian, state your case.
 peasant_neutralA: Well sir, the King requested a painted portrait of him and the Queen and promised to pay me handsomely for my work.
 peasant_neutralB: Naturally, I accepted. Creating a work of art for THE King Dax is an honor in itself.
-peasant_angry: Little did I know however, that our King is a money-hungry FIEND who refuses to pay his subjects their WELL. EARNED. DUES.
+peasant_angryB: Little did I know however, that our King is a money-hungry FIEND who refuses to pay his subjects their WELL. EARNED. DUES.
 judge_ponderA: Interesting...and what do you have to say to this King Dax?
 king_neutralB: I owe this man nothing. As HIS ruler I am entirely entitled to his work.
 +Your signature is on this contract!!_But that's not fair..._Says who??_THEN I QUIT BEING YOUR SUBJECT!: king_joyB: contract?? what contract?? : king_neutralB: Well that's a shame isn't it? It is not my job to keep you happy. judge_neutralB: Actually...it is. king_neutralA: wha..? : king_joyA: SAYS ME THE KING. WHAT ARE YOU GONNA DO ABOUT IT. king_enraged: WHAT I SAY GOES NOW GET OUT. : judge_ponderA: In that case we cannot doThat is grounds for treason. This court is adjourned. peasant_smugB: wait wha--
