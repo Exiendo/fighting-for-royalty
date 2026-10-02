@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://d03b1hlib3ewv" path="res://characters/peasant/peasant_smugA.png" id="8_208ka"]
 [ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scripts/peasant_poses.gd" id="9_208ka"]
 [ext_resource type="Texture2D" uid="uid://bja82r2w78nkb" path="res://characters/peasant/peasant_angryHANDedit.png" id="10_5sotp"]
-[ext_resource type="PackedScene" uid="uid://cyarhoyohhte8" path="res://scenes/testfire.tscn" id="11_f0u40"]
 [ext_resource type="Texture2D" uid="uid://c7llwpepen0ed" path="res://backgrounds/fiya1.png" id="13_jwa5r"]
 [ext_resource type="Texture2D" uid="uid://m7ortxbhe1de" path="res://backgrounds/fiya2.png" id="14_d8fpr"]
 [ext_resource type="Texture2D" uid="uid://bey25akr2hk7y" path="res://backgrounds/fiya3 .png" id="15_3c74v"]
@@ -40,19 +39,70 @@ modulate_color = Color(0, 1, 0, 1)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("13_jwa5r")
+"texture": ExtResource("15_3c74v")
 }, {
 "duration": 1.0,
 "texture": ExtResource("14_d8fpr")
 }, {
 "duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}],
+"loop": 1,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}],
+"loop": 2,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}],
+"loop": 1,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
 }, {
 "duration": 1.0,
 "texture": ExtResource("16_1lhdr")
 }],
 "loop": 2,
-"name": &"default",
+"name": &"4",
 "speed": 5.0
 }]
 
@@ -178,51 +228,32 @@ offset_bottom = 1010.4047
 texture = ExtResource("10_5sotp")
 expand_mode = 1
 
-[node name="AnimatedSprite2D" parent="CanvasLayer" unique_id=1011619561 instance=ExtResource("11_f0u40")]
-visible = false
-position = Vector2(847, 157)
-
-[node name="AnimatedSprite2D2" parent="CanvasLayer" unique_id=49310307 instance=ExtResource("11_f0u40")]
-visible = false
-position = Vector2(1316, 168)
-
-[node name="AnimatedSprite2D3" parent="CanvasLayer" unique_id=1586621471 instance=ExtResource("11_f0u40")]
-visible = false
-position = Vector2(243, 114)
-
-[node name="AnimatedSprite2D4" parent="CanvasLayer" unique_id=372322222 instance=ExtResource("11_f0u40")]
-visible = false
-position = Vector2(1892, 143)
-frame = 1
-
 [node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1552817144]
 position = Vector2(265, 104)
 scale = Vector2(0.08047619, 0.08047619)
 sprite_frames = SubResource("SpriteFrames_napuk")
-autoplay = "default"
-frame = 3
-frame_progress = 1.0
+animation = &"1"
+autoplay = "1"
 
 [node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=648405102]
 position = Vector2(849, 104)
 scale = Vector2(0.08047619, 0.08047619)
 sprite_frames = SubResource("SpriteFrames_napuk")
-autoplay = "default"
-frame = 3
-frame_progress = 1.0
+animation = &"2"
+autoplay = "2"
 
 [node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=503584790]
 position = Vector2(1326, 113)
 scale = Vector2(0.08047619, 0.08047619)
 sprite_frames = SubResource("SpriteFrames_napuk")
-autoplay = "default"
-frame = 2
+animation = &"3"
+autoplay = "3"
 
 [node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=2136658519]
 position = Vector2(1891, 107)
 scale = Vector2(0.08047619, 0.08047619)
 sprite_frames = SubResource("SpriteFrames_napuk")
-autoplay = "default"
-frame = 2
+animation = &"4"
+autoplay = "4"
 
 [connection signal="pressed" from="CanvasLayer/DialogPeasant/Box/Continue" to="CanvasLayer/DialogPeasant" method="_on_continue_pressed"]
