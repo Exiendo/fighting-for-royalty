@@ -19,6 +19,7 @@ var choice4 : String = ""
 @onready var sound_effects = $"../../../../SoundEffect"
 
 func dialogue(texts):
+	print(texts)
 	if texts != "":
 		for i in texts:
 			#print(type_string(typeof(i)))
@@ -92,7 +93,7 @@ func dialogue(texts):
 		if sound_eff != "":
 			print("Sound Effect: " + sound_eff)
 			sound_effects.sound_eff_play(sound_eff)
-		#print("Sentence: " + sentence)
+		print("Sentence: " + sentence)
 		ui_dialogue.set_text(charac_name + ": " + sentence)
 		pose = ""
 		music = ""
