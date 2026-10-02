@@ -1,18 +1,31 @@
 [gd_scene format=3 uid="uid://dxruted7swu7q"]
 
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="1_buwem"]
-[ext_resource type="Script" uid="uid://bsndq8810fc4f" path="res://scripts/peasant.gd" id="1_i6yst"]
 [ext_resource type="Script" uid="uid://d1oyqbbfj4i8h" path="res://scripts/audio_stream_player.gd" id="2_5sotp"]
 [ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="2_buwem"]
 [ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="3_f0u40"]
 [ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="3_hj0u7"]
-[ext_resource type="Script" uid="uid://dcsjw4lwfs8qx" path="res://scripts/DialogueUI.gd" id="4_hj0u7"]
 [ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="4_i6yst"]
 [ext_resource type="Texture2D" uid="uid://03s8mqnk6kkd" path="res://backgrounds/pbg done.jpg" id="5_buwem"]
 [ext_resource type="Texture2D" uid="uid://dlbach7215vl8" path="res://characters/peasant/peasant_neutralC.png" id="8_208ka"]
 [ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scripts/peasant_poses.gd" id="9_208ka"]
 [ext_resource type="Texture2D" uid="uid://bja82r2w78nkb" path="res://characters/peasant/peasant_angryHANDedit.png" id="10_5sotp"]
 [ext_resource type="PackedScene" uid="uid://cyarhoyohhte8" path="res://scenes/testfire.tscn" id="11_f0u40"]
+
+[sub_resource type="GDScript" id="GDScript_208ka"]
+script/source = "extends Node2D
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+	
+"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7k5ev"]
 texture = ExtResource("3_hj0u7")
@@ -34,7 +47,7 @@ texture = ExtResource("3_hj0u7")
 modulate_color = Color(0, 1, 0, 1)
 
 [node name="Peasant" type="Node2D" unique_id=1748484662]
-script = ExtResource("1_i6yst")
+script = SubResource("GDScript_208ka")
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1189886463]
 autoplay = true
@@ -110,7 +123,6 @@ custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 bbcode_enabled = true
 text = "Peasant: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-script = ExtResource("4_hj0u7")
 
 [node name="PeasantPodium" type="TextureRect" parent="CanvasLayer/DialogPeasant" unique_id=2083217737]
 z_index = 1
