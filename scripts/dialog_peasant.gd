@@ -1,6 +1,6 @@
 extends Control
 
-var file = FileAccess.open("res://dialogue/text/story_script.txt", FileAccess.READ)
+
 @onready var pose_time = $PeasantPoses
 @onready var DialogueUI = $VBoxContainer/DialogueUI
 @onready var musics = $"../../Music"
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_continue_pressed() -> void:
-	var content = file.get_line()
+	var content = Main.dialogue_next()
 	var main_data = Main.dialogue(content) 
 	var charac_name : String = ""
 	var display_name : String = ""

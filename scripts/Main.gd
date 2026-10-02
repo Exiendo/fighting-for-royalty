@@ -1,5 +1,5 @@
 extends RichTextLabel
-
+var file = FileAccess.open("res://dialogue/text/story_script.txt", FileAccess.READ)
 var charac_name : String = ""
 var display_name : String = ""
 var pose : String = ""
@@ -23,6 +23,10 @@ var count : int = 0
 	#Char = 
 	#
 	#Char.set_texture(load(texture))
+
+func dialogue_next():
+	var content = file.get_line()
+	return content
 
 func dialogue(texts):
 	if texts != "":
