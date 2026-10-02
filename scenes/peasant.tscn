@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://dxruted7swu7q"]
 
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="1_buwem"]
-[ext_resource type="Script" uid="uid://bsndq8810fc4f" path="res://scripts/peasant.gd" id="1_i6yst"]
+[ext_resource type="Script" uid="uid://bsxxa1uquvnvl" path="res://scripts/peasant.gd" id="1_i6yst"]
 [ext_resource type="Script" uid="uid://d1oyqbbfj4i8h" path="res://scripts/audio_stream_player.gd" id="2_5sotp"]
 [ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="2_buwem"]
 [ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="3_f0u40"]
 [ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="3_hj0u7"]
-[ext_resource type="Script" uid="uid://dcsjw4lwfs8qx" path="res://scripts/DialogueUI.gd" id="4_hj0u7"]
 [ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="4_i6yst"]
 [ext_resource type="Texture2D" uid="uid://03s8mqnk6kkd" path="res://backgrounds/pbg done.jpg" id="5_buwem"]
-[ext_resource type="Texture2D" uid="uid://dlbach7215vl8" path="res://characters/peasant/peasant_neutralC.png" id="8_208ka"]
+[ext_resource type="Texture2D" uid="uid://d03b1hlib3ewv" path="res://characters/peasant/peasant_smugA.png" id="8_208ka"]
 [ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scripts/peasant_poses.gd" id="9_208ka"]
 [ext_resource type="Texture2D" uid="uid://bja82r2w78nkb" path="res://characters/peasant/peasant_angryHANDedit.png" id="10_5sotp"]
-[ext_resource type="PackedScene" uid="uid://cyarhoyohhte8" path="res://scenes/testfire.tscn" id="11_f0u40"]
+[ext_resource type="Texture2D" uid="uid://c7llwpepen0ed" path="res://backgrounds/fiya1.png" id="13_jwa5r"]
+[ext_resource type="Texture2D" uid="uid://m7ortxbhe1de" path="res://backgrounds/fiya2.png" id="14_d8fpr"]
+[ext_resource type="Texture2D" uid="uid://bey25akr2hk7y" path="res://backgrounds/fiya3 .png" id="15_3c74v"]
+[ext_resource type="Texture2D" uid="uid://8cdstwyu7tya" path="res://backgrounds/fiya4.png" id="16_1lhdr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7k5ev"]
 texture = ExtResource("3_hj0u7")
@@ -32,6 +34,77 @@ modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0u40"]
 texture = ExtResource("3_hj0u7")
 modulate_color = Color(0, 1, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_napuk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}],
+"loop": 1,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}],
+"loop": 2,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}],
+"loop": 1,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_3c74v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d8fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jwa5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1lhdr")
+}],
+"loop": 2,
+"name": &"4",
+"speed": 5.0
+}]
 
 [node name="Peasant" type="Node2D" unique_id=1748484662]
 script = ExtResource("1_i6yst")
@@ -60,7 +133,7 @@ theme = ExtResource("1_buwem")
 script = ExtResource("2_buwem")
 
 [node name="Box" type="Panel" parent="CanvasLayer/DialogPeasant" unique_id=867671294]
-z_index = 2
+z_index = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,7 +164,7 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_5sotp")
 theme_override_styles/focus = SubResource("StyleBoxTexture_f0u40")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogPeasant" unique_id=469910811]
-z_index = 3
+z_index = 4
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.052
@@ -110,10 +183,9 @@ custom_minimum_size = Vector2(100, 150)
 layout_mode = 2
 bbcode_enabled = true
 text = "Peasant: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-script = ExtResource("4_hj0u7")
 
 [node name="PeasantPodium" type="TextureRect" parent="CanvasLayer/DialogPeasant" unique_id=2083217737]
-z_index = 1
+z_index = 2
 layout_mode = 0
 offset_left = 29.0
 offset_top = -828.0
@@ -134,6 +206,7 @@ mouse_filter = 2
 texture = ExtResource("5_buwem")
 
 [node name="PeasantPoses" type="TextureRect" parent="CanvasLayer/DialogPeasant" unique_id=743476759]
+z_index = 1
 layout_mode = 0
 offset_left = -16.0
 offset_top = -811.00006
@@ -155,17 +228,32 @@ offset_bottom = 1010.4047
 texture = ExtResource("10_5sotp")
 expand_mode = 1
 
-[node name="AnimatedSprite2D" parent="CanvasLayer" unique_id=1011619561 instance=ExtResource("11_f0u40")]
-position = Vector2(847, 157)
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1552817144]
+position = Vector2(265, 104)
+scale = Vector2(0.08047619, 0.08047619)
+sprite_frames = SubResource("SpriteFrames_napuk")
+animation = &"1"
+autoplay = "1"
 
-[node name="AnimatedSprite2D2" parent="CanvasLayer" unique_id=49310307 instance=ExtResource("11_f0u40")]
-position = Vector2(1316, 168)
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=648405102]
+position = Vector2(849, 104)
+scale = Vector2(0.08047619, 0.08047619)
+sprite_frames = SubResource("SpriteFrames_napuk")
+animation = &"2"
+autoplay = "2"
 
-[node name="AnimatedSprite2D3" parent="CanvasLayer" unique_id=1586621471 instance=ExtResource("11_f0u40")]
-position = Vector2(243, 114)
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=503584790]
+position = Vector2(1326, 113)
+scale = Vector2(0.08047619, 0.08047619)
+sprite_frames = SubResource("SpriteFrames_napuk")
+animation = &"3"
+autoplay = "3"
 
-[node name="AnimatedSprite2D4" parent="CanvasLayer" unique_id=372322222 instance=ExtResource("11_f0u40")]
-position = Vector2(1892, 143)
-frame = 1
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=2136658519]
+position = Vector2(1891, 107)
+scale = Vector2(0.08047619, 0.08047619)
+sprite_frames = SubResource("SpriteFrames_napuk")
+animation = &"4"
+autoplay = "4"
 
 [connection signal="pressed" from="CanvasLayer/DialogPeasant/Box/Continue" to="CanvasLayer/DialogPeasant" method="_on_continue_pressed"]

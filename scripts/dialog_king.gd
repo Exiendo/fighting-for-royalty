@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var pose_time = $PeasantPoses
+@onready var pose_time = $KingPoses
 @onready var DialogueUI = $VBoxContainer/DialogueUI
 @onready var musics = $"../../Music"
 @onready var sound_effects = $"../../SoundEffect"
@@ -52,7 +52,7 @@ func _on_continue_pressed() -> void:
 					sentence += i
 			else:
 				count += 1
-		if charac_name != "peasant":
+		if charac_name != "king":
 			print("Diff Char Name: " + charac_name)
 			Main.did_it_switch(true)
 			get_tree().change_scene_to_file("res://scenes/" + charac_name+ ".tscn")
@@ -100,7 +100,7 @@ func continue_please(content):
 					sentence += i
 			else:
 				count += 1
-		if charac_name != "peasant":
+		if charac_name != "king":
 			print("Diff Char Name: " + charac_name)
 			Main.did_it_switch(true)
 			get_tree().change_scene_to_file("res://scenes/" + charac_name+ ".tscn")

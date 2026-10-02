@@ -1,6 +1,7 @@
 extends RichTextLabel
 
 var charac_name : String = ""
+var display_name : String = ""
 var pose : String = ""
 var music : String = ""
 var sentence : String = ""
@@ -16,8 +17,9 @@ func dialogue(texts):
 	if texts != "":
 		for i in texts:
 			#print(type_string(typeof(i)))
-			if i == "-":
+			if i == "+":
 				#print("hyphen")
+				#Dialogue Choices
 				pass
 			elif i != "-" and i != ":" and i != "_":
 				#print("Char: " + i)
@@ -27,7 +29,7 @@ func dialogue(texts):
 					print("Charac_name: " + charac_name)
 				elif count == 1:
 					pose += i
-					#print("Pose: " + pose)
+					print("Pose: " + pose)
 				elif count == 2:
 					music += i
 					#print("Music: " + i)
@@ -42,7 +44,15 @@ func dialogue(texts):
 		
 		print("Character: " + charac_name)
 		if charac_name != "Peasant":
-			pass
+			if charac_name:
+				if charac_name != display_name:
+					display_name = charac_name
+
+			#pass
+		else:
+			if charac_name != display_name:
+				display_name = charac_name
+
 		#print("Pose: " + pose)
 		if pose != "":
 			peasant_poses.posing(pose)
@@ -53,7 +63,8 @@ func dialogue(texts):
 			print("Sound Effect: " + sound_eff)
 			sound_effects.sound_eff_play(sound_eff)
 		#print("Sentence: " + sentence)
-		ui_dialogue.set_text(charac_name + ": " + sentence)
+		ui_dialogue.set_text(display_name + ": " + sentence)
+		charac_name = ""
 		pose = ""
 		music = ""
 		sentence = ""

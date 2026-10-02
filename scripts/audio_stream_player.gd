@@ -7,5 +7,5 @@ func audio_play(music):
 	
 	audio.set_stream(load("res://audio/musics/" + music + ".wav"))
 	audio.play()
-	print("SE Playing: " + str(audio.get_stream_playback()) + str(audio.has_stream_playback()))
+	print("Music Playing: " + str(audio.get_stream_playback()) + str(audio.has_stream_playback()))
 	
