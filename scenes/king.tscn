@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="2_jlx0y"]
 [ext_resource type="Theme" uid="uid://de54tkvgwixey" path="res://ui_elements/dialog_theme.tres" id="3_7t663"]
 [ext_resource type="Script" uid="uid://bk53uyq2cwit6" path="res://scripts/dialog_king.gd" id="5_7t663"]
-[ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="5_r5w67"]
+[ext_resource type="Texture2D" uid="uid://bdyai2yb8yssf" path="res://ui_elements/play button.png" id="6_7qhre"]
 [ext_resource type="Texture2D" uid="uid://c6nmabf4ali7c" path="res://backgrounds/Royal B done.png" id="7_bge32"]
 [ext_resource type="Texture2D" uid="uid://bq67qlubneicy" path="res://backgrounds/rbg done.jpg" id="8_guyvr"]
 [ext_resource type="Texture2D" uid="uid://fj2eyliyihi7" path="res://characters/king/king_neutralA.png" id="9_3c7dj"]
@@ -13,22 +13,22 @@
 [ext_resource type="Texture2D" uid="uid://c2wiqrpsf5lrs" path="res://characters/king/king_enragedB.png" id="11_x0n45"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_32ug6"]
-texture = ExtResource("5_r5w67")
+texture = ExtResource("6_7qhre")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d80n7"]
-texture = ExtResource("5_r5w67")
+texture = ExtResource("6_7qhre")
 modulate_color = Color(0, 0.76862746, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdugh"]
-texture = ExtResource("5_r5w67")
+texture = ExtResource("6_7qhre")
 modulate_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqjji"]
-texture = ExtResource("5_r5w67")
+texture = ExtResource("6_7qhre")
 modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2acw"]
-texture = ExtResource("5_r5w67")
+texture = ExtResource("6_7qhre")
 modulate_color = Color(0, 1, 0, 1)
 
 [node name="king" type="Node2D" unique_id=254551934]

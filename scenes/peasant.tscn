@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://d1oyqbbfj4i8h" path="res://scripts/audio_stream_player.gd" id="2_5sotp"]
 [ext_resource type="Script" uid="uid://c3gpt1qyxcsto" path="res://scripts/dialog_peasant.gd" id="2_buwem"]
 [ext_resource type="Script" uid="uid://bl1disludjb8p" path="res://scripts/sound_effect.gd" id="3_f0u40"]
-[ext_resource type="Texture2D" uid="uid://cdixj13tq1nmu" path="res://ui_elements/icon.svg" id="3_hj0u7"]
 [ext_resource type="Texture2D" uid="uid://cjyed0h35sq2m" path="res://backgrounds/pesant b.png" id="4_i6yst"]
 [ext_resource type="Texture2D" uid="uid://03s8mqnk6kkd" path="res://backgrounds/pbg done.jpg" id="5_buwem"]
+[ext_resource type="Texture2D" uid="uid://bdyai2yb8yssf" path="res://ui_elements/play button.png" id="6_d15cl"]
 [ext_resource type="Texture2D" uid="uid://d03b1hlib3ewv" path="res://characters/peasant/peasant_smugA.png" id="8_208ka"]
 [ext_resource type="Script" uid="uid://c4585eik81r0u" path="res://scripts/peasant_poses.gd" id="9_208ka"]
 [ext_resource type="Texture2D" uid="uid://bja82r2w78nkb" path="res://characters/peasant/peasant_angryHANDedit.png" id="10_5sotp"]
@@ -17,22 +17,22 @@
 [ext_resource type="Texture2D" uid="uid://8cdstwyu7tya" path="res://backgrounds/fiya4.png" id="16_1lhdr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7k5ev"]
-texture = ExtResource("3_hj0u7")
+texture = ExtResource("6_d15cl")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_330e5"]
-texture = ExtResource("3_hj0u7")
+texture = ExtResource("6_d15cl")
 modulate_color = Color(0, 0.76862746, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_208ka"]
-texture = ExtResource("3_hj0u7")
+texture = ExtResource("6_d15cl")
 modulate_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5sotp"]
-texture = ExtResource("3_hj0u7")
+texture = ExtResource("6_d15cl")
 modulate_color = Color(0.078431375, 0.078431375, 0.078431375, 0.61960787)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0u40"]
-texture = ExtResource("3_hj0u7")
+texture = ExtResource("6_d15cl")
 modulate_color = Color(0, 1, 0, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_napuk"]
@@ -122,6 +122,30 @@ position = Vector2(960, 540)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1440052549]
 
+[node name="Choices" type="Control" parent="CanvasLayer" unique_id=915134423]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_buwem")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Choices" unique_id=219550364]
+z_index = 3
+layout_mode = 0
+offset_left = 1149.0
+offset_top = 245.0
+offset_right = 1808.0
+offset_bottom = 333.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Choices/Panel" unique_id=102703203]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="DialogPeasant" type="Control" parent="CanvasLayer" unique_id=1742733016]
 layout_mode = 3
 anchors_preset = 0
@@ -155,8 +179,6 @@ offset_left = -0.28808594
 offset_top = 0.07598877
 offset_right = 0.11791992
 offset_bottom = -0.012008667
-grow_horizontal = 0
-grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_7k5ev")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_330e5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_208ka")

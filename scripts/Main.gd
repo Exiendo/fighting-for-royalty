@@ -7,6 +7,18 @@ var music : String = ""
 var sentence : String = ""
 var sound_eff : String = ""
 var count : int = 0 
+var plus_count : int = 0
+var choice_count : int = 0
+var choice1 : String = ""
+var choice2 : String = ""
+var choice3 : String = ""
+var choice4 : String = ""
+var dialogue_choice1 : String = ""
+var dialogue_choice2 : String = ""
+var dialogue_choice3 : String = ""
+var dialogue_choice4 : String = ""
+
+
 #$CanvasLayer/DialogPeasant/PeasantPoses
 @onready var ui_dialogue = $CanvasLayer/DialogPeasant/VBoxContainer/DialogueUI
 @onready var peasant_poses = $CanvasLayer/DialogPeasant/PeasantPoses
@@ -34,36 +46,87 @@ func did_it_switch(value):
 func dialogue_next():
 	content = file.get_line()
 	return content
-
+	
+func choices(): #does this need to be here? we just need to store data
+	pass
+	
 func dialogue(texts):
 	if texts != "":
+		var dialogue_mode = 0
+		var pass_once = 1
+		var choice_mode = 0
+		print("Dialogue Mode: " + str(dialogue_mode))
+		print("Pass_once: " + str(pass_once))
 		for i in texts:
 			#print(type_string(typeof(i)))
+			
+			
+			if pass_once == 1 and i != "+":
+				pass_once = 0
+				print("Pass_once: " + str(pass_once))
+				dialogue_mode = 0
 			if i == "+":
+				pass_once = 0
+				dialogue_mode = 1
+			elif dialogue_mode == 1:
+				print("Dialogue Mode: " + str(dialogue_mode))
 				#print("hyphen")
 				#Dialogue Choices
+				if i != ":" and i != "=":
+					
+					if plus_count == 0:
+						choice1 += i
+						print("Choice 1: " + choice1)
+					if plus_count == 1:
+						choice2 += i
+					if plus_count == 2:
+						choice3 += i
+					if plus_count == 3:
+						choice4 += i
+				elif i == ":":
+					plus_count += 1
+				if i == "=":
+					plus_count = 10
+					choice_mode = 1
+					print("Choice Mode: " + str(choice_mode))
+				elif choice_mode == 1:
+					
+					if i != ">":
+						if choice_count == 0:
+							dialogue_choice1 += i
+						if choice_count == 1:
+							dialogue_choice2 += i
+						if choice_count == 2:
+							dialogue_choice3 += i
+						if choice_count == 3:
+							dialogue_choice4 += i
+					else:
+						choice_count += 1
+						print("Choice_count: " + str(choice_count))
+						
+					pass #another loop to obtain dialogue, and pick which dialogue to be used
 				pass
-			elif i != "+" and i != ":" and i != "_":
-				#print("Char: " + i)
-				
-				if count == 0:
-					charac_name = charac_name + i
-					#print("Charac_name: " + charac_name)
-				elif count == 1:
-					pose += i
-					#print("Pose: " + pose)
-				elif count == 2:
-					music += i
-					#print("Music: " + i)
-				elif count == 3:
-					sound_eff += i
-					print("")
-				elif count == 4:
-					sentence += i
-			elif i == "_":
-				count += 1
-			elif i == ":":
-				count = 4
+			else:
+				if i != "+" and i != ":" and i != "_":
+					#print("Char: " + i)
+					
+					if count == 0:
+						charac_name = charac_name + i
+						#print("Charac_name: " + charac_name)
+					elif count == 1:
+						pose += i
+						#print("Pose: " + pose)
+					elif count == 2:
+						music += i
+						#print("Music: " + i)
+					elif count == 3:
+						sound_eff += i
+					elif count == 4:
+						sentence += i
+				elif i == "_":
+					count += 1
+				elif i == ":":
+					count = 4
 		var main_data = []
 		
 		#get_tree().change_scene_to_file("res://scenes/"+ charac_name + ".tscn")
@@ -88,6 +151,12 @@ func dialogue(texts):
 		count = 0
 		var data = ""
 		
+		print("Choice 1: " + choice1 + " --> " + dialogue_choice1)
+		print("Choice 2: " + choice2 + " --> " + dialogue_choice2)
+		print("Choice 3: " + choice3 + " --> " + dialogue_choice3)
+		print("Choice 4: " + choice4 + " --> " + dialogue_choice4)
+		if dialogue_mode == 1:
+			print("This is a dialogue")
 		for i in range(len(main_data)):
 			data = data + main_data[i] + "_"
 		return data
